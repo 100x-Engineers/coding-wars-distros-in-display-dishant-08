@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the Tailwind CSS stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-blue-900 to-blue-800">
+
+
+<!-- Template Section -->
+<div class="container mx-auto p-4">
+  <div class="template-selection p-4 bg-blue-400 shadow-lg rounded-lg">
+    <h2 class="text-2xl font-bold mb-4 text-black text-center">Select a Template</h2>
+    <div class="template-options grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <label for="template-professional" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
+        <input type="radio" name="template" id="template-professional" value="professional" class="hidden">
+        Professional
+      </label>
+      <label for="template-creative" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
+        <input type="radio" name="template" id="template-creative" value="creative" class="hidden">
+        Creative
+      </label>
+      <label for="template-academic" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
+        <input type="radio" name="template" id="template-academic" value="academic" class="hidden">
+        Academic
+      </label>
+    </div>
+  </div>
+
+  <!-- Information Input Section -->
+  <div class="information-input p-4 bg-blue-800 shadow-lg mt-4 rounded-lg px-8 py-6">
+    <h2 class="text-2xl font-bold mb-4 text-center text-white">Input Your Information</h2>
+    <div class="input-fields grid grid-cols-1 sm:grid-cols-2 gap-4 text-black">
+      <input type="text" name="professional-summary" placeholder="Professional Summary" class="p-2 border border-gray-300 bg-blue-100 text-gray-800 rounded-lg focus:outline-none">
+      <input type="text" name="job-title" placeholder="Job Title" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="text" name="company-name" placeholder="Company Name" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <!-- <input type="date" name="dates-worked" placeholder="Dates Worked" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none"> -->
+      <input type="number" name="graduation-year" placeholder="Graduation Year" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" min="2005" max="2025">
+      <input type="text" name="institution-name" placeholder="Institution Name" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="text" name="relevant-courses" placeholder="Relevant Courses" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="text" name="skills" placeholder="Skills" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="url" name="github-url" placeholder="GitHub URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
+      <input type="url" name="linkedin-url" placeholder="LinkedIn URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
+      <input type="url" name="twitter-url" placeholder="Twitter URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
+    </div>
+    
+  </div>
+
+  <!-- Template Customization Section -->
+<div class="template-customization p-4 bg-blue-800 shadow-lg mt-4 rounded-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center text-white">Customize Your Template</h2>
+    <div class="header-options mb-4">
+      <label class="block text-lg font-semibold mb-2 text-white">Header Position</label>
+      <select name="header-position" id="header-position" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+        <option value="top">Top</option>
+        <option value="side">Side</option>
+      </select>
+    </div>
+    <div class="header-photo mb-4">
+      <label for="header-photo" class="block text-lg font-semibold mb-2 text-white">Include Photo in Header</label>
+      <input type="url" name="photo-url" placeholder="Enter Photo URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="checkbox" name="header-photo" id="header-photo" class="mr-2">
+    </div>
+    <div class="color-picker mb-4">
+      <label for="primary-color" class="block text-lg font-semibold text-white">Primary Color</label>
+      <input type="color" name="primary-color" id ="primary-color" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+    </div>
+
+    <div class="font-size-adjustment mb-4">
+      <label for="font-size" class="block text-lg font-semibold text-white">Font Size</label>
+      <select name="font-size" id="font-size" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+        <option value="16px">16px</option>
+        <option value="18px">18px</option>
+        <option value="20px">20px</option>
+      </select>
+    </div>
+    <div class="font-selection mb-4">
+      <label for="font-family" class="block text-lg font-semibold mb-2 text-white">Font Family</label>
+      <select name="font-family" id="font-family" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+        <option value="sans-serif">Sans-Serif</option>
+        <option value="serif">Serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="cursive">Cursive</option>
+      </select>
+    </div>
+    <!-- Generate Prompt Button -->
+<button id="generate-prompt-button" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition transform hover:scale-110 cursor-pointer">Generate Prompt</button>
+<div id = "see-prompt" class="p-3 bg-white border border-blue-600  my-4"></div>
+  
+<div id="resume-content"></div>
+  </div>
+</div>
+
+
+<!-- Add this script block at the bottom of your HTML, just before the closing </body> tag -->
+<script src = "app.js" >
+ 
+</script>
+
+
+</body>
+</html>
