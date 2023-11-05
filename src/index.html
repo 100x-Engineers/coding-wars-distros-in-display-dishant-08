@@ -8,20 +8,21 @@
 </head>
 <body class="bg-gradient-to-r from-blue-900 to-blue-800">
 
+
 <!-- Template Section -->
 <div class="container mx-auto p-4">
   <div class="template-selection p-4 bg-blue-400 shadow-lg rounded-lg">
     <h2 class="text-2xl font-bold mb-4 text-black text-center">Select a Template</h2>
     <div class="template-options grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <label for="template-professional" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100">
+      <label for="template-professional" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
         <input type="radio" name="template" id="template-professional" value="professional" class="hidden">
         Professional
       </label>
-      <label for="template-creative" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100">
-        <input type radio" name="template" id="template-creative" value="creative" class="hidden">
+      <label for="template-creative" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
+        <input type="radio" name="template" id="template-creative" value="creative" class="hidden">
         Creative
       </label>
-      <label for="template-academic" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100">
+      <label for="template-academic" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-blue-100 transition duration-300 ease-in-out transform hover:scale-105">
         <input type="radio" name="template" id="template-academic" value="academic" class="hidden">
         Academic
       </label>
@@ -32,18 +33,19 @@
   <div class="information-input p-4 bg-blue-800 shadow-lg mt-4 rounded-lg px-8 py-6">
     <h2 class="text-2xl font-bold mb-4 text-center text-white">Input Your Information</h2>
     <div class="input-fields grid grid-cols-1 sm:grid-cols-2 gap-4 text-black">
-      <input type="text" name="professional-summary" placeholder="Professional Summary" class="p-2 border border-gray-300 bg-blue-100  text-gray-800 rounded-lg focus:outline-none">
+      <input type="text" name="professional-summary" placeholder="Professional Summary" class="p-2 border border-gray-300 bg-blue-100 text-gray-800 rounded-lg focus:outline-none">
       <input type="text" name="job-title" placeholder="Job Title" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
       <input type="text" name="company-name" placeholder="Company Name" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="dates-worked" placeholder="Dates Worked" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="graduation-year" placeholder="Graduation Year" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <!-- <input type="date" name="dates-worked" placeholder="Dates Worked" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none"> -->
+      <input type="number" name="graduation-year" placeholder="Graduation Year" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" min="2005" max="2025">
       <input type="text" name="institution-name" placeholder="Institution Name" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="relevant-courses" placeholder="Relevant Courses" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="skills" placeholder="Skills" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="github-url" placeholder="GitHub URL" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="linkedin-url" placeholder="LinkedIn URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
-      <input type="text" name="twitter-url" placeholder="Twitter URL" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
+      <input type="text" name="relevant-courses" placeholder="Relevant Courses" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="text" name="skills" placeholder="Skills" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="url" name="github-url" placeholder="GitHub URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
+      <input type="url" name="linkedin-url" placeholder="LinkedIn URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
+      <input type="url" name="twitter-url" placeholder="Twitter URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none" pattern="https?://.+" title="Enter a valid URL starting with 'http://' or 'https://'">
     </div>
+    
   </div>
 
   <!-- Template Customization Section -->
@@ -51,19 +53,19 @@
     <h2 class="text-2xl font-bold mb-4 text-center text-white">Customize Your Template</h2>
     <div class="header-options mb-4">
       <label class="block text-lg font-semibold mb-2 text-white">Header Position</label>
-      <select name="header-position" id="header-position" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
+      <select name="header-position" id="header-position" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
         <option value="top">Top</option>
         <option value="side">Side</option>
       </select>
     </div>
     <div class="header-photo mb-4">
       <label for="header-photo" class="block text-lg font-semibold mb-2 text-white">Include Photo in Header</label>
+      <input type="url" name="photo-url" placeholder="Enter Photo URL" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
       <input type="checkbox" name="header-photo" id="header-photo" class="mr-2">
-      <input type="text" name="photo-url" placeholder="Enter Photo URL" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
     </div>
     <div class="color-picker mb-4">
       <label for="primary-color" class="block text-lg font-semibold text-white">Primary Color</label>
-      <input type="color" name="primary-color" id="primary-color" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
+      <input type="color" name="primary-color" id ="primary-color" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
     </div>
 
     <div class="font-size-adjustment mb-4">
@@ -76,7 +78,7 @@
     </div>
     <div class="font-selection mb-4">
       <label for="font-family" class="block text-lg font-semibold mb-2 text-white">Font Family</label>
-      <select name="font-family" id="font-family" class="p-2 border border-gray-300  bg-blue-100 rounded-lg focus:outline-none">
+      <select name="font-family" id="font-family" class="p-2 border border-gray-300 bg-blue-100 rounded-lg focus:outline-none">
         <option value="sans-serif">Sans-Serif</option>
         <option value="serif">Serif</option>
         <option value="monospace">Monospace</option>
@@ -84,13 +86,99 @@
       </select>
     </div>
     <!-- Generate Prompt Button -->
-<button id="generate-prompt-button" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 cursor-pointer">Generate Prompt</button>
+<button id="generate-prompt-button" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition transform hover:scale-110 cursor-pointer">Generate Prompt</button>
   </div>
 </div>
-<div id ='display'>
 
-</div>
 
-<script src="app.js"></script>
+<!-- Add this script block at the bottom of your HTML, just before the closing </body> tag -->
+<script>
+
+document.getElementById('generate-prompt-button').addEventListener('click', function() {
+  //  Initialize an error message
+let errorMessage = '';
+
+  // Get values from the form inputs
+  const template = document.querySelector('input[name="template"]:checked');
+  const professionalSummary = document.getElementsByName('professional-summary')[0].value;
+  const jobTitle = document.getElementsByName('job-title')[0].value;
+     const company = document.getElementsByName('company-name')[0].value;
+    // const datesWorked = document.getElementsByName('dates-worked')[0].value;
+  const graduationYear = document.getElementsByName('graduation-year')[0].value;
+  const institutionName = document.getElementsByName('institution-name')[0].value;
+  const relevantCourses = document.getElementsByName('relevant-courses')[0].value;
+  const skills = document.getElementsByName('skills')[0].value;
+  const headerPosition = document.getElementById('header-position').value;
+   const includePhoto = document.getElementById('header-photo').checked;
+  const photoURL = document.getElementsByName('photo-url')[0].value;
+   const primaryColor = document.getElementsByName('primary-color')[0].value;
+   const fontSize = document.getElementById('font-size').value;
+   const fontFamily = document.getElementById('font-family').value;
+   const githubURL = document.getElementsByName('github-url')[0].value;
+  const linkedinURL = document.getElementsByName('linkedin-url')[0].value;
+   const twitterURL = document.getElementsByName('twitter-url')[0].value;
+
+  //  Validate the inputs
+   if (!template) {
+       errorMessage += 'Select a template\n';
+     }
+     if (!professionalSummary) {
+       errorMessage += 'Professional Summary is required\n';
+     }
+     if (!jobTitle) {
+       errorMessage += 'Job Title is required\n';
+     }
+     if (!company) {
+       errorMessage += 'Company Name is required\n';
+     }
+  //  if (!datesWorked) {
+  // //  errorMessage += 'Dates Worked is required\n';
+  // }
+   if (!graduationYear || graduationYear < 2005 || graduationYear > 2025) {
+       errorMessage += 'Enter a valid Graduation Year (2005 - 2025)\n';
+     }
+     if (!institutionName) {
+       errorMessage += 'Institution Name is required\n';
+     }
+     // Add validation for other fields as needed
+
+  // If there are errors, display the error message
+    if (errorMessage) {
+     alert('Please correct the following errors:\n' + errorMessage);
+  } else {
+       // Create the GPT prompt and proceed with API request
+       let prompt = `Create a personalized portfolio website with the following details:\n`;
+      prompt += `Header Position: ${headerPosition}\n`;
+       if (includePhoto) {
+         prompt += `Include Photo in Header with URL: ${photoURL}\n`;
+       }
+       prompt += `Professional Summary: ${professionalSummary}\n`;
+       prompt += `Job Title: ${jobTitle}\n`;
+       prompt += `Company Name: ${company}\n`;
+    //  prompt += `Dates Worked: ${datesWorked}\n`;
+     prompt += `Graduation Year: ${graduationYear}\n`;
+       prompt += `Institution Name: ${institutionName}\n`;
+       prompt += `Relevant Courses: ${relevantCourses}\n`;
+       prompt += `Skills: ${skills}\n`;
+       prompt += `GitHub URL: ${githubURL}\n`;
+       prompt += `LinkedIn URL: ${linkedinURL}\n`;
+       prompt += `Twitter URL: ${twitterURL}\n`;
+       prompt += `Primary Color: ${primaryColor}\n`;
+       prompt += `Font Size: ${fontSize}\n`;
+       prompt += `Font Family: ${fontFamily}\n`;
+
+  //     // Output the formatted prompt for testing
+     console.log(prompt);
+
+  //     // Now, you can send this prompt to the OpenAI API for code generation
+  //     // You will need to make an API request to OpenAI with the generated prompt
+  //     // and handle the response in your JavaScript code. Implementing the API request
+  //     // and handling the response is outside the scope of this code snippet.
+    }
+ });
+ 
+</script>
+
+
 </body>
 </html>
