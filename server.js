@@ -2,6 +2,7 @@ const express = require('express');
 const OpenAI = require('openai');
 const cors = require('cors');
 require('dotenv').config();
+const completions = require('./completions');
 
 // Create an instance of the Express application
 const app = express();
@@ -34,14 +35,16 @@ app.get('/complete-text', async (req, res) => {
 
         // Extract the completion text from the API response
         const completion = chatCompletion.choices[0].message.content;
-
+        const completionHtml = `<div>${completion}</div>`;
+          completions.addCompletion(completionHtml);
+        
         console.log("completion", completion)
-
+        
         // Send the completion text back to the client
         res.json({ completion });
     } catch (error) {
         console.error(error);
-
+        
         // Send a 500 Internal Server Error response to the client
         res.status(500).send('Internal Server Error');
     }
@@ -51,3 +54,10 @@ app.get('/complete-text', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// const completion = 
+// const completionHtml = `<div>${completion}</div>`;
+// completions.addCompletion(completionHtml);
+
+
+    // 
