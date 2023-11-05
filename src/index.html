@@ -6,22 +6,22 @@
   <!-- Link to the Tailwind CSS stylesheet -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gradient-to-r from-blue-800 to-blue-200">
 
 <!-- Template Section -->
 <div class="container mx-auto p-4">
-  <div class="template-selection p-4 bg-white shadow-lg rounded-lg">
+  <div class="template-selection p-4 bg-gradient-to-r from-yellow-300 to-yellow-300 shadow-lg rounded-lg">
     <h2 class="text-2xl font-bold mb-4">Select a Template</h2>
     <div class="template-options grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <label for="template-professional" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg">
+      <label for="template-professional" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-gradient-to-r from-green-300 to-blue-400">
         <input type="radio" name="template" id="template-professional" value="professional" class="hidden">
         Professional
       </label>
-      <label for="template-creative" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg">
-        <input type="radio" name="template" id="template-creative" value="creative" class="hidden">
+      <label for="template-creative" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-gradient-to-r from-pink-300 to-red-400">
+        <input type radio" name="template" id="template-creative" value="creative" class="hidden">
         Creative
       </label>
-      <label for="template-academic" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg">
+      <label for="template-academic" class="template-option cursor-pointer flex flex-col items-center p-2 border border-gray-300 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-400">
         <input type="radio" name="template" id="template-academic" value="academic" class="hidden">
         Academic
       </label>
@@ -29,7 +29,7 @@
   </div>
 
   <!-- Information Input Section -->
-  <div class="information-input p-4 bg-white shadow-lg mt-4 rounded-lg">
+  <div class="information-input p-4 bg-gradient-to-r from-pink-300 to-purple-400 shadow-lg mt-4 rounded-lg">
     <h2 class="text-2xl font-bold mb-4">Input Your Information</h2>
     <div class="input-fields grid grid-cols-1 sm:grid-cols-2 gap-4">
       <input type="text" name="professional-summary" placeholder="Professional Summary" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
@@ -47,27 +47,25 @@
   </div>
 
   <!-- Template Customization Section -->
-  <div class="template-customization p-4 bg-white shadow-lg mt-4 rounded-lg">
+<div class="template-customization p-4 bg-gradient-to-r from-green-300 to-blue-400 shadow-lg mt-4 rounded-lg">
     <h2 class="text-2xl font-bold mb-4">Customize Your Template</h2>
+    <div class="header-options mb-4">
+      <label class="block text-lg font-semibold mb-2">Header Position</label>
+      <select name="header-position" id="header-position" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
+        <option value="top">Top</option>
+        <option value="side">Side</option>
+      </select>
+    </div>
+    <div class="header-photo mb-4">
+      <label for="header-photo" class="block text-lg font-semibold mb-2">Include Photo in Header</label>
+      <input type="checkbox" name="header-photo" id="header-photo" class="mr-2">
+      <input type="text" name="photo-url" placeholder="Enter Photo URL" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
+    </div>
     <div class="color-picker mb-4">
       <label for="primary-color" class="block text-lg font-semibold">Primary Color</label>
       <input type="color" name="primary-color" id="primary-color" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
     </div>
-    <div class="color-picker mb-4">
-      <label for="secondary-color" class="block text-lg font-semibold">Secondary Color</label>
-      <input type="color" name="secondary-color" id="secondary-color" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
-    </div>
-    <div class="color-picker mb-4">
-      <label for="background-color" class="block text-lg font-semibold">Background Color</label>
-      <input type="color" name="background-color" id="background-color" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
-    </div>
-    <div class="font-selection mb-4">
-      <label for="font-family" class="block text-lg font-semibold">Font Family</label>
-      <select name="font-family" id="font-family" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
-        <option value="sans-serif">Sans-Serif</option>
-        <option value="serif">Serif</option>
-      </select>
-    </div>
+
     <div class="font-size-adjustment mb-4">
       <label for="font-size" class="block text-lg font-semibold">Font Size</label>
       <select name="font-size" id="font-size" class="p-2 border border-gray-300 rounded-lg focus:outline-none">
